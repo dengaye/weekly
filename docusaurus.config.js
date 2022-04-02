@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: '技术周刊',
   tagline: '技术周刊',
-  url: 'https://dengaye.github.io/weekly',
-  baseUrl: '/',
+  url: 'https://dengaye.github.io',
+  baseUrl: '/weekly/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
