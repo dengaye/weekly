@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_PATH = './docs';
+const BASE_PATH = '../docs';
 
 const EXCLUDE_FILE_NAMES = ['intro'];
 
@@ -22,7 +22,7 @@ function getMarkdownList(dir, basePath = '') {
       if (EXCLUDE_FILE_NAMES.includes(fileName)) {
         return;
       }
-      const link = `[${fileName}](${encodeURI(BASE_PATH + '/' + basePath + fileName)}.md)`;
+      const link = `[${fileName}](${encodeURI(basePath + fileName)}.md)`;
       markdownList += `- ${link}\n`;
     }
   });
@@ -31,8 +31,12 @@ function getMarkdownList(dir, basePath = '') {
 }
 
 const markdownList = getMarkdownList(docsPath);
-const readmeContent = `# 好物分享\n
->记录一些有趣的事情 [访问地址](https://dengaye.github.io/weekly)\n
+const readmeContent = `---
+sidebar_position: 1
+---
+
+# 好物分享
+
 ${markdownList}`;
 
-fs.writeFileSync('README.md', readmeContent);
+fs.writeFileSync('./docs/intro.md', readmeContent);
