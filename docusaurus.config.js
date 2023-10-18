@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: '技术周刊',
-  tagline: '技术周刊',
+  title: '好物分享',
+  tagline: '好物分享',
   url: 'https://dengaye.github.io',
   baseUrl: '/weekly/',
   onBrokenLinks: 'throw',
@@ -32,7 +32,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '技术周刊',
+        title: '好物分享',
         items: [
           {
             href: 'https://github.com/dengaye',
