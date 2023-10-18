@@ -11,14 +11,16 @@ const docsPath = path.join(__dirname, '../docs');
 const filePath = path.join(docsPath, `${inputFilePath}.md`);
 
 if (filePaths.length > 1) {
+  const jsonFilePath = filePaths[0];
+  const lable = `"${jsonFilePath}"`;
   const jsonContent = `
   {
-    "label": ${filePaths[0]},
+    "label": ${lable},
     "position": 2
   }
   `;
-  checkFolderExistsAndCreateFolder(`${docsPath}/${filePaths[0]}`);
-  const jsonFileName = `${filePaths[0]}/_category_.json`;
+  checkFolderExistsAndCreateFolder(`${docsPath}/${jsonFilePath}`);
+  const jsonFileName = `${jsonFilePath}/_category_.json`;
   const jsonPath = path.join(docsPath, jsonFileName);
   fs.writeFileSync(jsonPath, jsonContent);
 }
@@ -32,7 +34,7 @@ title: ${fileName}
 
 # ${fileName}
 
-- 
+- []()
 
 `;
 
