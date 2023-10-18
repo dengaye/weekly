@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "preinstall": "husky install",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -12,7 +13,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "build:readme": "node generateReadme.js"
   },
   "homepage": "https://dengaye.github.io/weekly",
   "dependencies": {
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.4.3",
     "@tsconfig/docusaurus": "^2.0.2",
+    "husky": "^8.0.3",
     "typescript": "^4.6.3"
   },
   "browserslist": {
